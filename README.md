@@ -51,7 +51,7 @@ On Linux, it is best practice to use a **Virtual Environment** to avoid "externa
     pip install Pillow
     ```
 
-    >[!TIP]
+    > [!TIP]
     > **Linux Dependency Note:** If you see a `ModuleNotFoundError: No module named 'tkinter'`, run the command below in your **main terminal** (not inside the venv):
 
     ```bash
