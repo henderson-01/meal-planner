@@ -1,0 +1,263 @@
+[
+    {
+        "name": "Red Lentil Dhal",
+        "cost": 5.35,
+        "shop": "ALDI",
+        "list": "150g Red Lentils, 1 Onion, 2 Garlic Cloves, 1 tsp Turmeric, 100g Rice.",
+        "breakdown": [
+            "Red Lentils (1kg): £1.70",
+            "Onions (1kg): £1.00",
+            "Garlic (4pk): £0.95",
+            "Turmeric: £0.90",
+            "Rice (1kg): £0.80"
+        ],
+        "info": "Boil lentils with turmeric. Fry onion/garlic and stir in. Serve with rice."
+    },
+    {
+        "name": "Pasta Arrabbiata",
+        "cost": 2.90,
+        "shop": "ASDA",
+        "list": "150g Penne Pasta, 1/2 tin Chopped Tomatoes, Chilli Flakes, 1 Garlic Clove.",
+        "breakdown": [
+            "Penne Pasta: £0.50",
+            "Chopped Tomatoes: £0.45",
+            "Chilli Flakes: £1.00",
+            "Garlic: £0.95"
+        ],
+        "info": "Boil pasta. Simmer tomatoes with garlic and chilli. Toss together."
+    },
+    {
+        "name": "Sausage & Bean One-Pot",
+        "cost": 5.45,
+        "shop": "Tesco",
+        "list": "3 Sausages, 1/2 tin Baked Beans, 1 Onion, 2 Potatoes (cubed).",
+        "breakdown": [
+            "Sausages (8pk): £2.20",
+            "Baked Beans: £0.45",
+            "Onions (1kg): £1.00",
+            "Potatoes (2.5kg): £1.80"
+        ],
+        "info": "Brown sausages and onions. Add potatoes and beans. Simmer until soft."
+    },
+    {
+        "name": "Chickpea Curry",
+        "cost": 3.90,
+        "shop": "Lidl",
+        "list": "1 tin Chickpeas, 1/2 tin Tomatoes, 1 Onion, 1 tbsp Curry Powder, 100g Rice.",
+        "breakdown": [
+            "Chickpeas: £0.55",
+            "Tomatoes: £0.45",
+            "Onions: £1.00",
+            "Curry Powder: £1.10",
+            "Rice: £0.80"
+        ],
+        "info": "Fry onion and curry powder. Add chickpeas and tomatoes. Serve over rice."
+    },
+    {
+        "name": "Jacket Potato & Beans",
+        "cost": 2.85,
+        "shop": "Any",
+        "list": "1 Large Baking Potato, 1/2 tin Baked Beans, Small knob of Butter.",
+        "breakdown": [
+            "Baking Potatoes (4pk): £1.20",
+            "Baked Beans: £0.45",
+            "Butter/Spread: £1.20"
+        ],
+        "info": "Prick potato and bake at 200°C for 1 hour. Top with hot beans."
+    },
+    {
+        "name": "Simple Cheese Omelette",
+        "cost": 7.15,
+        "shop": "Lidl",
+        "list": "3 Eggs, 30g Cheddar Cheese, Splash of Milk, Handful of Lettuce.",
+        "breakdown": [
+            "Eggs (6pk): £2.10",
+            "Cheddar Cheese: £3.00",
+            "Milk: £1.30",
+            "Lettuce: £0.75"
+        ],
+        "info": "Whisk eggs and milk. Fry until set, add cheese, fold. Serve with salad."
+    },
+    {
+        "name": "Tuna Pasta Bake",
+        "cost": 5.70,
+        "shop": "Morrisons",
+        "list": "150g Pasta, 1/2 tin Tuna, 1/2 jar White Sauce, 20g Cheese.",
+        "breakdown": [
+            "Pasta: £0.60",
+            "Tuna: £0.90",
+            "White Sauce: £1.20",
+            "Cheese: £3.00"
+        ],
+        "info": "Mix cooked pasta, tuna, and sauce. Top with cheese and grill until bubbly."
+    },
+    {
+        "name": "Vegetable Stir-fry",
+        "cost": 3.30,
+        "shop": "ALDI",
+        "list": "150g Frozen Mixed Veg, 1 Nest of Noodles, 1 tbsp Soy Sauce, 1cm Ginger.",
+        "breakdown": [
+            "Mixed Veg (Frozen): £1.40",
+            "Noodles: £0.60",
+            "Soy Sauce: £1.00",
+            "Ginger: £0.30"
+        ],
+        "info": "Fry veg and soy sauce on high heat. Add noodles at the end."
+    },
+    {
+        "name": "Egg Fried Rice",
+        "cost": 5.10,
+        "shop": "Any",
+        "list": "150g Cooked Rice (cold), 2 Eggs, 50g Frozen Peas, 1 tbsp Soy Sauce.",
+        "breakdown": [
+            "Rice: £0.80",
+            "Eggs (6pk): £2.10",
+            "Frozen Peas: £1.20",
+            "Soy Sauce: £1.00"
+        ],
+        "info": "Fry peas and rice. Move to side, scramble eggs in pan, then mix all together."
+    },
+    {
+        "name": "Lentil Cottage Pie",
+        "cost": 6.15,
+        "shop": "ASDA",
+        "list": "100g Lentils, 1 Carrot (diced), 1 Onion, 2 Potatoes (mashed), Beef Stock Cube.",
+        "breakdown": [
+            "Lentils: £1.70",
+            "Carrots: £0.65",
+            "Onions: £1.00",
+            "Potatoes: £1.80",
+            "Stock Cubes: £1.00"
+        ],
+        "info": "Cook lentils/veg in stock. Top with mash and bake at 190°C for 20 mins."
+    },
+    {
+        "name": "Chicken Thigh traybake",
+        "cost": 13.50,
+        "shop": "Tesco",
+        "list": "2 Chicken Thighs, 1 Potato, 1 Carrot, 1 tsp Dried Herbs, 1 tbsp Oil.",
+        "breakdown": [
+            "Chicken Thighs: £3.80",
+            "Potatoes: £1.80",
+            "Carrots: £0.65",
+            "Dried Herbs: £0.90",
+            "Olive Oil: £6.00"
+        ],
+        "info": "Chop veg. Toss everything in oil and herbs. Roast at 200°C for 35 mins."
+    },
+    {
+        "name": "Sardines on Toast",
+        "cost": 2.50,
+        "shop": "Any",
+        "list": "2 Slices of Bread, 1 tin Sardines in Tomato Sauce, Squeeze of Lemon.",
+        "breakdown": [
+            "Bread: £0.85",
+            "Sardines: £1.30",
+            "Lemon: £0.35"
+        ],
+        "info": "Toast bread. Lightly mash sardines on top and warm under the grill."
+    },
+    {
+        "name": "Pesto Pasta",
+        "cost": 1.80,
+        "shop": "ALDI",
+        "list": "150g Pasta, 2 tbsp Green Pesto, 1 tbsp Pasta Water, 5g Parmesan (optional).",
+        "breakdown": [
+            "Pasta: £0.60",
+            "Pesto: £1.20"
+        ],
+        "info": "Boil pasta. Reserve a little water. Mix pasta with pesto and water."
+    },
+    {
+        "name": "Black Bean Quesadilla",
+        "cost": 5.90,
+        "shop": "Lidl",
+        "list": "2 Tortilla Wraps, 1/2 tin Black Beans, 30g Cheese, 1/2 tsp Cumin.",
+        "breakdown": [
+            "Tortilla Wraps: £1.25",
+            "Black Beans: £0.65",
+            "Cheese: £3.00",
+            "Cumin: £1.00"
+        ],
+        "info": "Mash beans on tortilla, add cheese, fold and fry until crisp."
+    },
+    {
+        "name": "Spanish Omelette",
+        "cost": 10.70,
+        "shop": "Any",
+        "list": "2 Eggs, 1 Potato (thinly sliced), 1/2 Onion, 1 tbsp Oil.",
+        "breakdown": [
+            "Eggs: £1.90",
+            "Potatoes: £1.80",
+            "Onions: £1.00",
+            "Olive Oil: £6.00"
+        ],
+        "info": "Fry potato/onion until soft. Pour eggs over. Cook low until set."
+    },
+    {
+        "name": "Minestrone Soup",
+        "cost": 3.45,
+        "shop": "ASDA",
+        "list": "1/2 tin Tomatoes, 50g Small Pasta, 100g Frozen Veg, 1 Stock Cube.",
+        "breakdown": [
+            "Tomatoes: £0.45",
+            "Pasta: £0.60",
+            "Frozen Veg: £1.40",
+            "Stock Cubes: £1.00"
+        ],
+        "info": "Boil all ingredients in 500ml water until pasta is cooked (approx 10 mins)."
+    },
+    {
+        "name": "Corned Beef Hash",
+        "cost": 7.80,
+        "shop": "Morrisons",
+        "list": "1/3 tin Corned Beef, 1 Large Potato (cubed), 1 Onion, 1 tsp Worcestershire Sauce.",
+        "breakdown": [
+            "Corned Beef: £3.50",
+            "Potatoes: £1.80",
+            "Onions: £1.00",
+            "Worcestershire Sauce: £1.50"
+        ],
+        "info": "Boil potatoes for 5 mins. Fry with onions and corned beef until crispy."
+    },
+    {
+        "name": "Pea & Mint Risotto",
+        "cost": 5.30,
+        "shop": "Tesco",
+        "list": "100g Arborio Rice, 100g Frozen Peas, 1 Stock Cube, 1 tsp Dried Mint.",
+        "breakdown": [
+            "Arborio Rice: £2.20",
+            "Frozen Peas: £1.20",
+            "Stock Cubes: £1.00",
+            "Dried Mint: £0.90"
+        ],
+        "info": "Add stock to rice slowly while stirring. Stir in peas and mint at the end."
+    },
+    {
+        "name": "Burrito Bowls",
+        "cost": 6.20,
+        "shop": "Sainsbury's",
+        "list": "100g Rice, 1/2 tin Kidney Beans, 50g Sweetcorn, 1 tbsp Salsa, 20g Cheese.",
+        "breakdown": [
+            "Rice: £0.80",
+            "Kidney Beans: £0.65",
+            "Sweetcorn: £0.65",
+            "Salsa: £1.10",
+            "Cheese: £3.00"
+        ],
+        "info": "Layer rice, warmed beans, corn, and salsa. Top with cheese."
+    },
+    {
+        "name": "Bacon & Pea Pasta",
+        "cost": 5.20,
+        "shop": "ALDI",
+        "list": "150g Pasta, 2 Rashers Bacon (chopped), 50g Peas, 1 tbsp Cream Cheese.",
+        "breakdown": [
+            "Pasta: £0.60",
+            "Bacon: £2.20",
+            "Peas: £1.20",
+            "Cream Cheese: £1.20"
+        ],
+        "info": "Fry bacon. Boil pasta with peas. Drain and mix with cream cheese and bacon."
+    }
+]
