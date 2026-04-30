@@ -32,33 +32,33 @@ On Linux, it is best practice to use a **Virtual Environment** to avoid "externa
 
 **Open your terminal** in the project folder path or **Right click** the project folder and **open in terminal.** Ensure have `meal_planner.py` and `meals.json` and `logo.png` are in the same folder before starting.
 
-1. **Create the virtual environment**:
+- **Create the virtual environment**:
 
     ```bash
     python3 -m venv .venv
     ```
 
-2. **Activate the environment**:
+- **Activate the environment**:
 
     ```bash
     source .venv/bin/activate
     ```
 
-3. **Install Dependencies**:
+- **Install Dependencies**:
 
     ```bash
     pip install customtkinter
     pip install Pillow
     ```
 
-    > [!TIP]
-    > **Linux Dependency Note:** If you see a `ModuleNotFoundError: No module named 'tkinter'`, run the command below in your **main terminal** (not inside the venv):
+>[!TIP]
+> **Linux Dependency Note:** If you see a `ModuleNotFoundError: No module named 'tkinter'`, run the command below in your **main terminal** (not inside the venv):
 
-    ```bash
-    sudo apt install python3-tk
-    ```
+```bash
+sudo apt install python3-tk
+```
 
-4. **Then Run the application in the `.venv`**:
+- **Then Run the application in the `.venv`**:
 
     ```bash
     source .venv/bin/activate
