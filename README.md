@@ -51,7 +51,7 @@ On Linux, it is best practice to use a **Virtual Environment** to avoid "externa
     pip install Pillow
     ```
 
->[!TIP]
+> [!TIP]
 > **Linux Dependency Note:** If you see a `ModuleNotFoundError: No module named 'tkinter'`, run the command below in your **main terminal** (not inside the venv):
 
 ```bash
@@ -94,5 +94,5 @@ This project was developed to practice key software development concepts:
 - **Affiliation:** This project is not affiliated with, sponsored by, or endorsed by ALDI, Lidl, Tesco, ASDA, Morrisons, or Sainsbury's. All trademarks belong to their respective owners.
 - **Nutritional Advice:** Recipes are provided for convenience; please check individual product labels for allergens and nutritional information.
 
->[!IMPORTANT]
+> [!CAUTION]
 > This is provided "as is" without warranty of any kind. I am not responsible for any damage, data loss, or issues caused by the use of this Program. **Use it at your own risk.**
