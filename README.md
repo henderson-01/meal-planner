@@ -26,6 +26,13 @@ The Project. Budget Bytes 2026 is a desktop application built with Python and `C
 
 ---
 
+## 🌇 Screenshots Of The App
+
+![Meal Planner Screenshot 1](Images/Screenshot%201.png)
+![Meal Planner Screenshot 2](Images/Screenshot%202.png)
+
+---
+
 ## 🛠️ Technical Setup (Linux / Desktop)
 
 On Linux, it is best practice to use a **Virtual Environment** to avoid "externally managed environment" errors and keep your system Python clean.
