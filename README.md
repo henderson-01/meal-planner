@@ -28,8 +28,8 @@ The Project. Budget Bytes 2026 is a desktop application built with Python and `C
 
 ## 🌇 Screenshots Of The App
 
-![Meal Planner Screenshot 1](Images/Screenshot%201.png)
-![Meal Planner Screenshot 2](Images/Screenshot%202.png)
+![Meal Planner Screenshot 1](./Images/Screenshot1.png)
+![Meal Planner Screenshot 2](./Images/Screenshot2.png)
 
 ---
 
