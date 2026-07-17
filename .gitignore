@@ -1,10 +1,12 @@
 # --- Python Caches & Compiled files ---
 __pycache__/
+.pyright-cache/
 *.py[cod]
 *$py.class
 *.so
 .ruff_cache/
 .mypy_cache/
+.pdm-python
 
 # --- Virtual Environments & Secrets ---
 venv/
@@ -20,10 +22,12 @@ dist/
 build/
 *.egg-info/
 *.egg
+.hatch
 
 # --- Logs & Databases ---
 *.log
-*.sqlite3
+*.sqlite
+*.db
 
 # --- Testing & Coverage ---
 .pytest_cache/
@@ -37,6 +41,9 @@ htmlcov/
 # --- Markdownlint ---
 .markdownlint_cache/
 .markdownlint-cli2/
+
+# --- AI Extensions in VS Code ---
+.continue/
 
 # --- System / OS ---
 .DS_Store
@@ -64,3 +71,6 @@ Thumbs.db
 # --- Bash ---
 *.bak
 *.orig
+
+# --- Docker ---
+.docker/
