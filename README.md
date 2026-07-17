@@ -35,42 +35,42 @@ The Project. Budget Bytes 2026 is a desktop application built with Python and `C
 
 ## 🛠️ Technical Setup (Linux / Desktop)
 
-On Linux, it is best practice to use a **Virtual Environment** to avoid "externally managed environment" errors and keep your system Python clean.
+This project uses `uv`, an extremely fast Python package manager, to handle dependencies and virtual environments automatically.
 
-**Open your terminal** in the project folder path or **Right click** the project folder and **open in terminal.** Ensure have `meal_planner.py` and `meals.json` and `logo.png` are in the same folder before starting.
+**Open your terminal** in the project folder path. Ensure `meal_planner.py`, `meals.json`, and `logo.png` are in the same folder before starting.
 
-- **Create the virtual environment**:
-
-    ```bash
-    python3 -m venv .venv
-    ```
-
-- **Activate the environment**:
+- **Install `uv`** (if you don't have it already):
 
     ```bash
-    source .venv/bin/activate
+    curl -LsSf [https://astral.sh/uv/install.sh](https://astral.sh/uv/install.sh) | sh
     ```
+
+    *(Mac/Windows users can check the [official installation guide](https://docs.astral.sh/uv/getting-started/installation/)).*
 
 - **Install Dependencies**:
+  You no longer need to manually create or activate a virtual environment. Simply run:
 
     ```bash
-    pip install customtkinter
-    pip install Pillow
+    uv sync
     ```
 
+    *(This automatically creates a hidden `.venv` and installs `customtkinter` and `Pillow` based on the project configuration).*
+
 > [!NOTE]
-> **Linux Dependency:** If you see a `ModuleNotFoundError: No module named 'tkinter'`, run the command below in your **main terminal** (not inside the venv):
+> **Linux System Dependency:** If you see a `ModuleNotFoundError: No module named 'tkinter'` when trying to run the app, run the command below in your terminal to install the system UI package:
 
 ```bash
 sudo apt install python3-tk
+
 ```
 
-- **Then Run the application in the `.venv`**:
+- **Run the application**:
+Use `uv run` to execute the app safely inside its isolated environment:
 
-    ```bash
-    source .venv/bin/activate
-    python3 meal_planner.py
-    ```
+```bash
+uv run meal_planner.py
+
+```
 
 ---
 
