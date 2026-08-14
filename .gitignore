@@ -42,8 +42,8 @@ htmlcov/
 .markdownlint_cache/
 .markdownlint-cli2/
 
-# --- AI Extensions in VS Code ---
-.continue/
+# --- AI Extensions ---
+.opencode/
 
 # --- System / OS ---
 .DS_Store
