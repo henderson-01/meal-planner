@@ -11,11 +11,23 @@ ctk.set_default_color_theme("blue")
 
 
 class MealPlannerApp(ctk.CTk):
-    # Main application class for the Meal Planner
-    def __init__(self):
+    """Main application class for the meal planner GUI.
+    
+    Manages the entire Budget Bytes 2026 application, including UI layout,
+    meal database loading, search functionality, and meal card display.
+    """
+    def __init__(self) -> None:
+        """Initialize the meal planner application and UI components.
+        
+        Sets up the main window, loads the meals database from meals.json,
+        configures the sidebar with controls, creates the scrollable content area,
+        and displays the welcome screen.
+        """
         super().__init__()
 
         # Window geometry and properties
+        self.logo_display = None
+        self.welcome_logo = None
         self.title("Budget Bytes 2026")
         self.width = 950
         self.height = 750
@@ -75,7 +87,7 @@ class MealPlannerApp(ctk.CTk):
         self.shop_label.grid(row=3, column=0, padx=20, pady=(30, 5), sticky="w")
 
         # Dynamic shop list generation from database
-        shops = list(set([m["shop"] for m in self.meals_db])) if self.meals_db else []
+        shops = list({m["shop"] for m in self.meals_db}) if self.meals_db else []
         shops.sort()
 
         self.shop_frame = ctk.CTkFrame(self.sidebar, fg_color="transparent")
@@ -112,8 +124,13 @@ class MealPlannerApp(ctk.CTk):
         # Show initial welcome screen
         self.show_welcome_screen()
 
-    def show_welcome_screen(self):
-        # Displays a logo and welcome text in the main area on startup
+    def show_welcome_screen(self) -> None:
+        """Display the welcome screen with logo and greeting text.
+        
+        Loads logo.png from the project directory, applies transparency processing
+        based on background color detection, and displays it along with welcome text.
+        Falls back to text-only display if image loading fails.
+        """
         try:
             script_dir = os.path.dirname(os.path.abspath(__file__))
             # Image logo.png filename
@@ -144,19 +161,28 @@ class MealPlannerApp(ctk.CTk):
                 size=(500, 500),  # Logo image size
             )
 
-            self.logo_display = ctk.CTkLabel(
-                self.scrollable_frame, image=self.welcome_logo, text=""
-            )
-            self.logo_display.pack(pady=(100, 20), fill="x", expand=True)
+            if getattr(self, "welcome_logo", None):
+                self.logo_display = ctk.CTkLabel(
+                    self.scrollable_frame, image=self.welcome_logo, text=""
+                )
+                self.logo_display.pack(pady=(100, 20), fill="x", expand=True)
 
-            ctk.CTkLabel(
-                self.scrollable_frame,
-                text="Welcome to Budget Bytes 2026\nEnter your budget to start planning!",
-                font=ctk.CTkFont(size=16, slant="italic"),
-                text_color="#777777",
-            ).pack(fill="x", expand=True)
-        except Exception:
-            # Fallback if image is missing
+                ctk.CTkLabel(
+                    self.scrollable_frame,
+                    text="Welcome to Budget Bytes 2026\nEnter your budget to start planning!",
+                    font=ctk.CTkFont(size=16, slant="italic"),
+                    text_color="#777777",
+                ).pack(fill="x", expand=True)
+            else:
+                # Fallback if image is missing
+                ctk.CTkLabel(
+                    self.scrollable_frame,
+                    text="BUDGET BYTES",
+                    font=ctk.CTkFont(size=40, weight="bold"),
+                    text_color="#333333",
+                ).pack(pady=150, fill="x", expand=True)
+        except (OSError, AttributeError):
+            # Fallback if image loading fails
             ctk.CTkLabel(
                 self.scrollable_frame,
                 text="BUDGET BYTES",
@@ -164,29 +190,57 @@ class MealPlannerApp(ctk.CTk):
                 text_color="#333333",
             ).pack(pady=150, fill="x", expand=True)
 
-    def _on_mousewheel(self, event):
-        # Cross-platform mousewheel event handler
+    def _on_mousewheel(self, event) -> None:
+        """Handle mousewheel scroll events across Windows, macOS, and Linux.
+        
+        Processes scroll events and scrolls the scrollable_frame accordingly.
+        Handles platform-specific event attributes delta for Windows/macOS,
+        num for Linux and gracefully handles invalid events.
+        
+        Args:
+            event: The mousewheel event object from tkinter.
+        """
         try:
-            if event.delta:
-                scroll_amount = int(-1 * (event.delta / 120))
-                self.scrollable_frame._parent_canvas.yview_scroll(
-                    scroll_amount, "units"
-                )
-            elif event.num == 4:
-                self.scrollable_frame._parent_canvas.yview_scroll(-1, "units")
-            elif event.num == 5:
-                self.scrollable_frame._parent_canvas.yview_scroll(1, "units")
-        except Exception:
+            delta = getattr(event, "delta", 0)
+            num = getattr(event, "num", 0)
+            canvas = getattr(self.scrollable_frame, "_parent_canvas", None)
+
+            if not canvas:
+                return
+
+            if delta:
+                scroll_amount = int(-1 * (delta / 120))
+                canvas.yview_scroll(scroll_amount, "units")
+            elif num == 4:
+                canvas.yview_scroll(-1, "units")
+            elif num == 5:
+                canvas.yview_scroll(1, "units")
+
+        except (AttributeError, TypeError):
+            # Ignore scrolling if event or canvas is invalid
             pass
 
-    def center_window(self):
-        # Calculate and set window position to screen center
+    def center_window(self) -> None:
+        """Calculate and center the application window on the screen.
+        
+        Uses the screen dimensions and the pre-configured window width/height
+        to calculate the centered position and applies it via geometry().
+        """
         sw, sh = self.winfo_screenwidth(), self.winfo_screenheight()
         x, y = (sw // 2) - (self.width // 2), (sh // 2) - (self.height // 2)
         self.geometry(f"{self.width}x{self.height}+{x}+{y}")
 
-    def find_meals(self, event=None):
-        # Logic to filter and display meals based on budget
+    def find_meals(self, _event: object = None) -> None:
+        """Filter and display meals within the user's budget.
+        
+        Clears the current display, validates the budget input from the entry field,
+        filters meals from the database that fit within the budget, sorts them by cost,
+        and creates UI cards for each matching meal. Displays error messages for invalid
+        input or no matches.
+        
+        Args:
+            _event: Optional event object from Enter key binding. Not used.
+        """
         for widget in self.scrollable_frame.winfo_children():
             widget.destroy()
 
@@ -217,8 +271,16 @@ class MealPlannerApp(ctk.CTk):
             for m in matches:
                 self.create_card(m)
 
-    def create_card(self, m):
-        # Factory method to build UI cards for individual meals
+    def create_card(self, m: dict) -> None:
+        """Build and display a UI card for a single meal.
+        
+        Creates a styled card frame containing meal name, price, shop source,
+        shopping list, optional cost breakdown, and cooking instructions.
+        Adds the card to the scrollable content area.
+        
+        Args:
+            m: Dictionary containing meal data name, cost, shop, list, breakdown, info.
+        """
         card = ctk.CTkFrame(
             self.scrollable_frame,
             corner_radius=8,
